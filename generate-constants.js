@@ -8,8 +8,8 @@ const generateConstants = ({ prefix, constants }) => {
     return newConstants;
   }
   
-  if (!Array.isArray(constants) && !constants.length) {
-    console.warn(`no constants available. type of constants is ${typeof constants}, expected an array.`);
+  if (!Array.isArray(constants) || !constants.length) {
+    console.warn(`unavailable constants or wrong type: constant's type is "${typeof constants}", expected array.`);
 
     return newConstants;
   }
